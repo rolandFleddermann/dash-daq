@@ -21,12 +21,19 @@ function LabelContainer(props) {
     labelText = props.label.label;
     customLabelStyle = props.label.style;
   }
-  const labelElement = <Label style={customLabelStyle} css={props.labelCSS} position={props.labelPosition}>
-    {labelText && labelText.length ? labelText : ''}
-  </Label>
+  const labelElement = (
+    <Label style={customLabelStyle} css={props.labelCSS} position={props.labelPosition}>
+      {labelText && labelText.length ? labelText : ''}
+    </Label>
+  );
   // if (labelText && labelText.length) {
   return (
-    <Container className={props.className} id={props.id} labelPosition={props.labelPosition} fullSize={props.fullSize}>
+    <Container
+      className={props.className}
+      id={props.id}
+      labelPosition={props.labelPosition}
+      fullSize={props.fullSize}
+    >
       {props.labelPosition == 'top' && labelElement}
       {props.children}
       {props.labelPosition != 'top' && labelElement}

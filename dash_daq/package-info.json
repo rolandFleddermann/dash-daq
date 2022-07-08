@@ -29,7 +29,7 @@
     "build:r": "dash-generate-components ./src/components dash_daq -p package-info.json --r-prefix='daq'",
     "build": "npm run test && npm run lint && npm run build:js && npm run build:py && npm run build:r",
     "postbuild": "es-check es5 dash_daq/*.js",
-    "build:dev": "npm run build:js-dev && npm run build:py",
+    "build:dev": "npm run build:js && npm run build:py",
     "build-tarball": "npm run build && python setup.py sdist",
     "test": "jest src/components/__tests__",
     "test-gauge": "jest src/components/__tests__/Gauge.test.js",
@@ -58,7 +58,7 @@
     "styled-components": "^4.4.0",
     "tinygradient": "^0.4.0",
     "webpack": "^4.41.0",
-    "yarn": "^1.22.11"
+    "yarn": "^1.22.19"
   },
   "devDependencies": {
     "@babel/core": "^7.6.0",
