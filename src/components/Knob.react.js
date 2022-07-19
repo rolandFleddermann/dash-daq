@@ -57,7 +57,7 @@ class Knob extends Component {
   getValue(value) {
     return value > this.props.min && value < this.props.max
       ? value
-      : this.props.min > value
+      : this.props.min >= value
       ? this.props.min
       : this.props.max;
   }
